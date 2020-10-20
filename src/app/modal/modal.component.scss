@@ -1,9 +1,9 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: rgba(0,0,0,.8);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   &__content {
@@ -17,6 +17,12 @@
     background-color: white;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 20px;
+  }
+  &__text{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: black;
+    text-align: center;
   }
   &__content_dark {
     background-color: black;
@@ -52,6 +58,7 @@
   }
   &__form {
     display: flex;
+    position: relative;
     &-input {
       margin-right: 1rem;
       padding: 1.6rem 2.8rem;
@@ -63,8 +70,16 @@
         font-family: Montserrat;
         font-weight: normal;
         font-size: 14px;
-        padding: 1.6rem 2.8rem;
         color: #909090;
+      }
+    }
+    &-validation {
+      position: absolute;
+      bottom: -2rem;
+      left: 1.5rem;
+      &-item {
+        font-size: 1.2rem;
+        color: #C40202;
       }
     }
   }

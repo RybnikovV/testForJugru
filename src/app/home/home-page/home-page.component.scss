@@ -1,4 +1,5 @@
 .promo-page {
+  overflow: hidden;
 
   &__container {
     position: relative;
@@ -10,16 +11,17 @@
 
   &__animation {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 760px;
-    height: 500px;
+    right: -10%;
+    top: -100px;
+    width: 50%;
+    height: 60%;
     overflow: hidden;
+    transform: rotate(-40deg);
     &-line {
       position: absolute;
       width: 3000px;
-      height: 3000px;
-      background: repeating-linear-gradient(45deg, rgba(255,255,255,0) 80px, rgba(255,255,255,0) 155px, rgba(0,0,0,.5) 160px, rgba(0,0,0,1) 160px, rgba(0,0,0,1) 240px);
+      height: 1000px;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0) 80px, rgba(255,255,255,0) 155px, rgba(0,0,0,.5) 160px, rgba(0,0,0,1) 160px, rgba(0,0,0,1) 240px);
       animation: 20s infinite linear;
       animation-name: move;
     }

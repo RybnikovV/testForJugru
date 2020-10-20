@@ -7,10 +7,33 @@
         будет офлайн
       </div>
     </div>
-    <div class="modal__content-layout">
-      <div class="modal__form">
-        <input type="text" class="modal__form-input" placeholder="Укажите email">
-        <input type="submit" class="btn btn_light" value="Подписаться">
+    <div class="modal__content-layout" *ngIf="!signed">
+      <form class="modal__form" [formGroup]="formSubscribe" (ngSubmit)="submit()">
+        <input type="text"
+               class="modal__form-input"
+               placeholder="Укажите email"
+               formControlName="email">
+        <button type="submit"
+                class="btn btn_light"
+                [disabled]="formSubscribe.invalid">
+          Подписаться
+        </button>
+        <div class="modal__form-validation"
+             *ngIf="formSubscribe.get('email').invalid && formSubscribe.get('email').touched">
+          <small *ngIf="formSubscribe.get('email').errors.required"
+                  class="modal__form-validation-item">
+            Сюда нужно что-то начепятать
+          </small>
+          <small *ngIf="formSubscribe.get('email').errors.email"
+                 class="modal__form-validation-item">
+            Вы серьезно?
+          </small>
+        </div>
+      </form>
+    </div>
+    <div class="modal__content-layout" *ngIf="signed">
+      <div class="modal__text">
+        Спасибо, что подписались на нашу рассылку!
       </div>
     </div>
     <div class="modal__footer">

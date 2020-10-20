@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-modal',
@@ -7,27 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   displayModalSubscription: boolean;
+  signed: boolean;
   displayModalNegative: boolean;
   displayModal: boolean;
+  formSubscribe: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
+    this.formSubscribe = new FormGroup({
+      email: new FormControl('', [
+        Validators.email,
+        Validators.required,
+      ])
+    });
   }
 
-  closeModal(){
+  closeModal() {
     this.displayModal = false;
     this.displayModalSubscription = false;
     this.displayModalNegative = false;
   }
 
-  openModalSubscribe(){
+  openModalSubscribe() {
     this.displayModal = true;
     this.displayModalSubscription = true;
   }
 
-  openModalNegative(){
+  openModalNegative() {
     this.displayModal = true;
     this.displayModalNegative = true;
+  }
+
+  submit() {
+    this.signed = true;
   }
 }

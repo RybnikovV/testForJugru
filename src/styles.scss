@@ -1,5 +1,9 @@
 @import "./style/reboot.css";
 
+body{
+  overflow-x: hidden;
+}
+
 $btn-color-dark: #000;
 $btn-color-light: #FBCB03;
 
@@ -37,6 +41,15 @@ html {
   }
   &_light:hover {
     background-color: #E6B901;
+  }
+  &_light:disabled{
+    background-color: rgba(251, 203, 3, .3);
+  }
+  &_light:hover:disabled {
+    background-color: rgba(251, 203, 3, .3);
+  }
+  &:disabled{
+    cursor: default;
   }
 }
 
