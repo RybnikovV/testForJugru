@@ -1,0 +1,60 @@
+@import "./style/reboot.css";
+
+$btn-color-dark: #000;
+$btn-color-light: #FBCB03;
+
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 10px;
+};
+* {
+  font-family: Montserrat;
+  font-weight: normal;
+};
+
+
+//btn
+.btn {
+  display: flex;
+  justify-content: center;
+  padding: 1.9rem 1rem;
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
+  min-width: 21rem;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  &_dark {
+    background-color: rgb(0, 0, 0);
+    color: #FFFFFF;
+  }
+  &_dark:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  &_light {
+    background-color: #FBCB03;
+  }
+  &_light:hover {
+    background-color: #E6B901;
+  }
+}
+
+.title-h1 {
+  font-size: 5rem;
+  line-height: 6rem;
+  font-weight: bold;
+};
+.title-h2 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  font-weight: 600;
+};
+.important-text {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-weight: 300;
+  & + & {
+    margin-top: 15px;
+  };
+};

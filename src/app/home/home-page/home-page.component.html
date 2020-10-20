@@ -1,0 +1,38 @@
+<div class="promo-page">
+  <div class="promo-page__animation">
+    <div class="promo-page__animation-line"></div>
+  </div>
+
+  <div class="promo-page__container">
+    <div>
+      <img class="promo-page__logo" src="./assets/image/logo.png" alt="logo Jug.ru">
+    </div>
+    <div class="promo-page__text-group">
+      <h1 class="title-h1 promo-page__title">
+        Конференции, которые нужны
+      </h1>
+      <div>
+        <p class="important-text">
+          Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.
+        </p>
+        <p class="important-text">
+          С нас — крутая программа,
+          топовые спикеры, технические доклады без воды.
+        </p>
+        <p class="important-text">
+          С вас — готовность смотреть и общаться
+        </p>
+      </div>
+    </div>
+    <div class="promo-page__btn-group">
+      <div class="promo-page__btn-wrapper promo-page__btn-wrapper_hi">
+        <div class="btn btn_light" (click)="openModal.openModalSubscribe()">Купить билет</div>
+      </div>
+      <div class="promo-page__btn-wrapper promo-page__btn-wrapper_face-palm">
+        <div class="btn btn_dark" (click)="openModal.openModalNegative()">Послать в жопу</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal #openModal></app-modal>

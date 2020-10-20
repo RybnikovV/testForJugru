@@ -1,0 +1,80 @@
+.promo-page {
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 510px;
+    margin: 150px 0px 60px 165px;
+  };
+
+  &__animation {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 760px;
+    height: 500px;
+    overflow: hidden;
+    &-line {
+      position: absolute;
+      width: 3000px;
+      height: 3000px;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0) 80px, rgba(255,255,255,0) 155px, rgba(0,0,0,.5) 160px, rgba(0,0,0,1) 160px, rgba(0,0,0,1) 240px);
+      animation: 20s infinite linear;
+      animation-name: move;
+    }
+  };
+
+  &__title {
+    margin-bottom: 20px;
+  };
+
+  &__logo{
+    margin-bottom: 55px;
+  };
+
+  &__text-group {
+    margin-bottom: 100px;
+  };
+
+  &__btn-group {
+    display: flex;
+    justify-content: space-between;
+  };
+
+  &__btn-wrapper {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      margin-left: -25px;
+      width: 52px;
+      height: 52px;
+    }
+  };
+  &__btn-wrapper_hi {
+    &:before {
+      background-image: url('../../../assets/image/emoji-hi.png');
+    }
+  };
+  &__btn-wrapper_face-palm {
+    &:before {
+      background-image: url('../../../assets/image/emoji-face-palm.png');
+    }
+  };
+};
+
+
+@keyframes move{
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: -800px;
+  }
+  100% {
+    left: -1600px;
+  }
+}

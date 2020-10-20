@@ -1,0 +1,48 @@
+<div class="modal" *ngIf="displayModal">
+
+  <div class="modal__content" *ngIf="displayModalSubscription">
+    <div class="modal__title modal__title_positive">
+      <div class="modal__title-text title-h2">
+        Я хочу знать, когда <br>
+        будет офлайн
+      </div>
+    </div>
+    <div class="modal__content-layout">
+      <div class="modal__form">
+        <input type="text" class="modal__form-input" placeholder="Укажите email">
+        <input type="submit" class="btn btn_light" value="Подписаться">
+      </div>
+    </div>
+    <div class="modal__footer">
+      <div class="modal__politic">
+        Нажимая на кнопку вы соглашаетесь на обработку персональных данных
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__content modal__content_dark" *ngIf="displayModalNegative">
+    <div class="modal__title modal__title_negative">
+      <div class="modal__title-text title-h2">
+        Идите в жопу!
+      </div>
+    </div>
+    <div class="modal__content-layout">
+      <div class="modal__check-list">
+        <label class="modal__check-item" for="whyNegative">
+          <input type="radio" name="whyNegative" value="price" id="whyNegative"> Вы свои цены видели?
+        </label>
+        <label class="modal__check-item" for="empty">
+          <input type="radio" name="whyNegative" value="empty" id="empty"> Доклады ни о чем
+        </label>
+        <label class="modal__check-item" for="areUHappy">
+          <input type="radio" name="whyNegative" value="areUHappy" id="areUHappy"> У вас там всё хорошо?
+        </label>
+        <label class="modal__check-item" for="priceTo">
+          <input type="radio" name="whyNegative" value="priceTo" id="priceTo"> Денег нет, но вы держитесь
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__close title-h2" (click)="closeModal()">Я кликнул просто посмотреть</div>
+</div>
